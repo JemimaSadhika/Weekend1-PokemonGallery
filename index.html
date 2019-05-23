@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pokemon Gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .inner1 {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding-bottom: 16px;
+      overflow: hidden;
+      display: clearfix;
+    }
+
+    .inner2 {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding-bottom: 2px;
+      overflow: hidden;
+    }
+
+    .container-fluid {
+      background-color: #e0e0d2;
+
+    }
+
+    .row {
+      overflow: hidden;
+    }
+
+    [class*="col-"] {
+      margin-bottom: -99999px;
+      padding-bottom: 99999px;
+    }
+
+    .tag {
+      margin-left: 17px;
+      margin-top: 10px;
+      margin-right: 276px;
+      padding: 2px;
+      padding-left: 14px;
+      border-radius: 12px;
+      padding-right: 9px;
+      display: inline-flex;
+    }
+
+    .description {
+      padding-top: 18px;
+    }
+
+    .text {
+      padding-top: 8px;
+      padding-left: 31px;
+      padding-right: 25px;
+      margin-left: 13px;
+      line-height: 1.5em;
+    }
+
+    .text2 {
+      padding-top: 1px;
+      padding-left: 19px;
+      padding-right: 17px;
+      margin-left: 13px;
+      line-height: 1.5em;
+    }
+
+    .rotated {
+      transform: rotate(-13deg);
+      background-color: #f99847;
+      border-radius: 64px;
+      padding-top: 13px;
+      margin-left: 18px;
+      margin-right: 20px;
+      margin-top: 27px;
+      padding-bottom: 11px;
+    }
+
+    .rotated2 {
+      transform: rotate(-13deg);
+      background-color: #88dae5;
+      border-radius: 64px;
+      padding-top: 13px;
+      margin-left: 18px;
+      margin-right: 20px;
+      margin-top: 13px;
+      padding-bottom: 11px;
+    }
+
+    .inverserotate {
+      transform: rotate(13deg);
+    }
+
+    .title {
+      padding-top: 3px;
+      margin-left: 39px;
+    }
+
+    #img1 {
+      margin-left: 4px;
+      margin-top: -61px;
+      position: relative;
+      ;
+    }
+
+    #img2 {
+      margin-left: -3px;
+      margin-top: -87px;
+      position: relative;
+    }
+
+    #img3 {
+      margin-left: 1px;
+      margin-top: -89px;
+      position: relative;
+    }
+
+    body {
+      color: #ffffff;
+    }
+
+
+    .arrow {
+      margin-top: -59px;
+      margin-left: 330px;
+
+    }
+
+    .arrow2 {
+      margin-top: -59px;
+      margin-left: 341px;
+    }
+
+    .circle-text {
+
+      width: 50%;
+      margin-left: 70px;
+      margin-top: 52px;
+      text-align: center;
+    }
+
+    .circle-text:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background: #ffb047;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+
+    }
+
+    .circle-text div {
+      float: left;
+      width: 100%;
+      padding-top: 50%;
+      line-height: 1em;
+      margin-top: -0.5em;
+      text-align: center;
+      color: white;
+    }
+
+    .circle-text2 {
+
+      width: 50%;
+      margin-left: 70px;
+      margin-top: 50px;
+      text-align: center;
+
+    }
+
+    .circle-text2:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background: #93f9ea;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+
+    }
+
+    .circle-text2 div {
+      float: left;
+      width: 100%;
+      padding-top: 50%;
+      line-height: 1em;
+      margin-top: -0.5em;
+      text-align: center;
+      color: white;
+      text-align: center;
+
+    }
+    .circle-text3 {
+
+width: 50%;
+margin-left: 70px;
+margin-top: 50px;
+text-align: center;
+
+}
+
+.circle-text3:after {
+content: "";
+display: block;
+width: 100%;
+height: 0;
+padding-bottom: 100%;
+background: #ffb047;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+text-align: center;
+
+}
+
+.circle-text3 div {
+float: left;
+width: 100%;
+padding-top: 50%;
+line-height: 1em;
+margin-top: -0.5em;
+text-align: center;
+color: white;
+text-align: center;
+
+}
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row>[class *='col-sm-4'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+   
+    .row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container-fluid bg-3 ">
+
+    <div class="row row-eq-height">
+
+      <div class="col-sm-4 ">
+        <div class="inner1 in1" style="background-color: #f88321">
+          <div class="description">
+            <div class="tag" style="background-color: #fab275">Charizad</div>
+            <h1>
+              <div class="arrow">&#x2192;</div>
+            </h1>
+            <div class="rotated">
+              <div class="inverserotate">
+                <div class="title">
+                  <h1><b>Charizad</b></h1>
+                </div>
+                <div class="text">
+                  <p>Charizad is a bipedal, reptilian Pokemon with a primarily orange body. Spits fire that is hot
+                    enough to melt boulders. Known to cause forest fires unintentionally.</p>
+                </div>
+              </div>
+            </div>
+            <div class="circle-text">
+              <div><img src="6.png" class="img-fluid" id="img1" style="width:65%; height:70%" alt="Image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 ">
+        <div class="inner1 in2" style="background-color: #70d3e0">
+          <div class="description">
+            <div class="tag" style="background-color: #a6e3eb">squirtle</div>
+            <h1>
+              <div class="arrow">&#x2192;</div>
+            </h1>
+            <div class="rotated2" style="background-color:#88dae5;">
+              <div class="inverserotate">
+                <div class="title">
+                  <h1><b>Squirtle</b></h1>
+                </div>
+                <div class="text2">
+                  <p>Squirtle is a small Pokemon that resembles a light blue turtle. While it typically walks on its two
+                    short legs, it has been shown to run on all fours in Super Smash Bros. Brawl. It has large eyes and
+                    a slightly hooked upper lip.</p>
+                </div>
+              </div>
+            </div>
+            <div class="circle-text2">
+              <div><img src="7.png" class="img-responsive" id="img2" style="width:155%; height:100%" alt="Image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4 ">
+        <div class="inner1 in3" style="background-color: #f88321">
+          <div class="description">
+            <div class="tag" style="background-color: #fab275">Pikachu</div>
+            <h1>
+              <div class="arrow">&#x2192;</div>
+            </h1>
+            <div class="rotated">
+              <div class="inverserotate">
+                <div class="title">
+                  <h1><b>Pikachu</b></h1>
+                </div>
+                <div class="text">
+                  <p>Pikachu is a Mouse Pokemon and the evolved form of Pichu. Pikachu's tail is sometimes struck by
+                    lightning as it raises it to check its surroundings.</p>
+                </div>
+              </div>
+            </div>
+            <div class="circle-text3">
+              <div><img src="25.png" class="img-responsive" id="img3" style="width:103%; height:92%" alt="Image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+
+
+</body>
+
+</html>
